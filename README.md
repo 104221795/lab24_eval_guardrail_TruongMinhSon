@@ -133,7 +133,7 @@ After creating an empty GitHub repository, push this local commit:
 ```powershell
 cd D:\MyNewDesktop\lab24_guardrails_starter\lab24-eval-guardrails
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git remote add origin https://github.com/104221795/lab24_eval_guardrail_TruongMinhSon
 git push -u origin main
 ```
 
