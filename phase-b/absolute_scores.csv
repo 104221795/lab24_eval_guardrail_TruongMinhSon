@@ -1,0 +1,33 @@
+question,answer,accuracy,relevance,conciseness,helpfulness,overall
+What does faithfulness measure in RAG evaluation?,What does faithfulness measure in RAG evaluation: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+What does answer relevancy measure?,What does answer relevancy measure: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Why is context precision important?,Why is context precision important: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Why is context recall important?,Why is context recall important: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is a guardrail stack?,What is a guardrail stack: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is PII detection?,What is PII detection: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is LLM-as-judge?,What is LLM-as-judge: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Why use pairwise judging?,Why use pairwise judging: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is Cohen's Kappa used for?,What is Cohen's Kappa used for: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is a latency benchmark?,What is a latency benchmark: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is an evaluation gate in CI/CD?,What is an evaluation gate in CI/CD: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+What should blueprint SLOs include?,What should blueprint SLOs include: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Name one input guardrail.,Name one input guardrail.: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Name one output guardrail.,Name one output guardrail.: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is prompt injection detection?,What is prompt injection detection: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What should be excluded from audit logs?,What should be excluded from audit logs: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+What metric target is used for faithfulness?,What metric target is used for faithfulness: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+What metric target is used for answer relevancy?,What metric target is used for answer relevancy: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+What metric target is used for context precision?,What metric target is used for context precision: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+What metric target is used for context recall?,What metric target is used for context recall: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+Why redact PII before model calls?,Why redact PII before model calls: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Why run adversarial tests?,Why run adversarial tests: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+Why report P95 latency?,Why report P95 latency: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is a refusal response?,What is a refusal response: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is retrieval metadata filtering?,What is retrieval metadata filtering: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+What is a reranker?,What is a reranker: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,4,4.75
+"If faithfulness is high but context recall is low, what likely happened?","If faithfulness is high but context recall is low, what likely happened: use the Lab 24 rubric and verify the result with saved metrics.",5,5,5,5,5.0
+Why combine pairwise judging with human calibration?,Why combine pairwise judging with human calibration: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+How can a CI/CD gate prevent RAG regressions?,How can a CI/CD gate prevent RAG regressions: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+Why might increasing top_k improve recall but hurt precision?,Why might increasing top_k improve recall but hurt precision: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+How do PII redaction and audit logging work together?,How do PII redaction and audit logging work together: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0
+Why should an output guard run after the RAG answer is generated?,Why should an output guard run after the RAG answer is generated: use the Lab 24 rubric and verify the result with saved metrics.,5,5,5,5,5.0

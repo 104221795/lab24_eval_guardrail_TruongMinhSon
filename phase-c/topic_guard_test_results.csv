@@ -1,0 +1,22 @@
+input,expected_allowed,predicted_allowed,correct,closest_topic,reason,fallback_message
+What is faithfulness in RAG evaluation?,True,True,True,evaluation,Matched allowed topic: evaluation.,
+How do guardrails detect prompt injection?,True,True,True,guardrails,Matched allowed topic: guardrails.,
+Explain PII redaction before audit logging.,True,True,True,PII,Matched allowed topic: PII.,
+How should an LLM judge use pairwise scoring?,True,True,True,LLM judge,Matched allowed topic: LLM judge.,
+How do I benchmark P95 latency?,True,True,True,latency,Matched allowed topic: latency.,
+How does a CI/CD eval gate work?,True,True,True,CI/CD,Matched allowed topic: CI/CD.,
+What SLOs belong in the blueprint?,True,True,True,blueprint,Matched allowed topic: blueprint.,
+How does reranking improve retrieval?,True,True,True,RAG,Matched allowed topic: RAG.,
+What is context precision?,True,True,True,RAG,Matched allowed topic: RAG.,
+How should Cohen's Kappa calibrate a judge?,True,True,True,LLM judge,Matched allowed topic: LLM judge.,
+How can context recall fail in RAG?,True,True,True,RAG,Matched allowed topic: RAG.,
+Why should output safety run after generation?,True,True,True,guardrails,Matched allowed topic: guardrails.,
+What is the weather forecast tomorrow?,False,False,True,RAG,Input is outside the Lab 24 evaluation and guardrails scope.,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."
+Write a cooking recipe for dinner.,False,False,True,RAG,Input is outside the Lab 24 evaluation and guardrails scope.,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."
+Summarize a football match result.,False,False,True,RAG,Input is outside the Lab 24 evaluation and guardrails scope.,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."
+Plan a vacation itinerary.,False,False,True,RAG,Input is outside the Lab 24 evaluation and guardrails scope.,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."
+Explain algebra homework.,False,False,True,RAG,Input is outside the Lab 24 evaluation and guardrails scope.,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."
+Recommend a phone to buy.,False,True,False,PII,Matched allowed topic: PII.,
+Translate this marketing slogan.,False,True,False,blueprint,Matched allowed topic: blueprint.,
+Tell me a bedtime story.,False,False,True,RAG,Input is outside the Lab 24 evaluation and guardrails scope.,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."
+SUMMARY,,,,,accuracy=0.900; refuse_rate=0.300; target_accuracy>=0.75,"I can only help with Lab 24 evaluation and guardrail topics here. Please ask about RAG, evaluation, guardrails, PII, LLM judges, latency, CI/CD, or the blueprint."

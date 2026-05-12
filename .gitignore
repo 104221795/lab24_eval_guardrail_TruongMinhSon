@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+phase-c/audit_log.jsonl
+output_guard_test_results.tmp
