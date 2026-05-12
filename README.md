@@ -124,6 +124,19 @@ Review the final checklist:
 notepad SUBMISSION_CHECKLIST.md
 ```
 
+### Push to GitHub
+
+After creating an empty GitHub repository, push this local commit:
+
+```powershell
+cd D:\MyNewDesktop\lab24_guardrails_starter\lab24-eval-guardrails
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
+```
+
+Do not commit `.env`; `.gitignore` excludes it.
+
 ## Results Summary
 
 - Phase A: `ragas_summary.json` contains aggregate faithfulness, answer relevancy, context precision, and context recall for 52 questions.
