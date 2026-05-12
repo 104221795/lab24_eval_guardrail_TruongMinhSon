@@ -108,6 +108,14 @@ Current Phase A metrics:
 | Repo structure matches template | PASS | root, phase-a/b/c/d, workflow, demo folders all present |
 | Push to GitHub with clear commit history | READY | local git repo initialized with clear commits. Add remote and push manually. |
 
+## Bonus Items
+
+| Bonus | Status | Evidence |
+|---|---|---|
+| Cross-judge protocol (+3) | PASS | `phase-b/cross_judge.py` evaluates 30 questions with 3 judge profiles and writes `cross_judge_results.csv`, `cross_judge_summary.json`, `cross_judge_report.md` |
+| Eval dashboard (+3) | PASS | `dashboard/app.py`, `dashboard/README.md`, `requirements-dashboard.txt` |
+| Blog post (+2) | DRAFT READY | `blog/lab24-full-eval-guardrails-post.md`; publish publicly and add URL to README to fully claim public-post bonus |
+
 ## Manual GitHub Push Commands
 
 Run these after creating an empty GitHub repository:

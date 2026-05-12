@@ -48,6 +48,7 @@ python phase-a/run_ragas_eval.py
 python phase-a/analyze_failures.py
 python phase-b/judge_pairwise.py
 python phase-b/kappa_analysis.py
+python phase-b/cross_judge.py
 python phase-c/input_guard.py
 python phase-c/output_guard.py
 python phase-c/full_pipeline.py
@@ -62,6 +63,7 @@ python phase-a/run_ragas_eval.py
 python phase-a/analyze_failures.py
 python phase-b/judge_pairwise.py
 python phase-b/kappa_analysis.py
+python phase-b/cross_judge.py
 python phase-c/input_guard.py
 python phase-c/output_guard.py
 python phase-c/full_pipeline.py
@@ -76,6 +78,7 @@ cd D:\MyNewDesktop\lab24_guardrails_starter\lab24-eval-guardrails
 .\.venv\Scripts\python.exe phase-a/analyze_failures.py
 .\.venv\Scripts\python.exe phase-b/judge_pairwise.py
 .\.venv\Scripts\python.exe phase-b/kappa_analysis.py
+.\.venv\Scripts\python.exe phase-b/cross_judge.py
 .\.venv\Scripts\python.exe phase-c/input_guard.py
 .\.venv\Scripts\python.exe phase-c/output_guard.py
 .\.venv\Scripts\python.exe phase-c/full_pipeline.py
@@ -102,6 +105,7 @@ Phase B:
 ```powershell
 python phase-b/judge_pairwise.py
 python phase-b/kappa_analysis.py
+python phase-b/cross_judge.py
 ```
 
 Phase C:
@@ -117,6 +121,7 @@ Final grading dry-run:
 ```powershell
 python phase-a/run_ragas_eval.py --gate
 python phase-b/kappa_analysis.py
+python phase-b/cross_judge.py
 python phase-c/full_pipeline.py
 ```
 
@@ -139,12 +144,42 @@ git push -u origin main
 
 Do not commit `.env`; `.gitignore` excludes it.
 
+## Bonus Items
+
+This repository includes three optional bonus deliverables in addition to the required Lab 24 work.
+
+| Bonus | Points | Proof |
+|---|---:|---|
+| Cross-judge protocol | +3 | `phase-b/cross_judge.py`, `phase-b/cross_judge_results.csv`, `phase-b/cross_judge_summary.json`, `phase-b/cross_judge_report.md` |
+| Eval dashboard | +3 | `dashboard/app.py`, `dashboard/README.md`, `requirements-dashboard.txt` |
+| Blog post draft | +2 | `blog/lab24-full-eval-guardrails-post.md`, `blog/README.md` |
+
+Run the cross-judge protocol:
+
+```powershell
+python phase-b/cross_judge.py
+```
+
+Run the optional dashboard:
+
+```powershell
+pip install -r requirements-dashboard.txt
+streamlit run dashboard/app.py
+```
+
+To claim the public blog bonus, publish `blog/lab24-full-eval-guardrails-post.md` to Medium, dev.to, GitHub Pages, or the course forum, then add the public URL here:
+
+```text
+Blog URL: TODO
+```
+
 ## Results Summary
 
 - Phase A: `ragas_summary.json` contains aggregate faithfulness, answer relevancy, context precision, and context recall for 52 questions.
 - Phase A simulated evaluation cost: `$0.18`, below the required `$0.50` budget.
 - Phase A Day 18 corpus: `phase-a/day18_corpus_manifest.json` documents 2 source PDFs, 41 source PDF pages, and 52 derived text evidence pages/chunks used for evaluation.
 - Phase B: `judge_bias_report.md` documents position bias, length bias, and Cohen's Kappa calibration from 10 sample human labels.
+- Bonus cross-judge protocol: `cross_judge_summary.json` currently evaluates 30 questions with 3 judge profiles and mean agreement `0.989`.
 - Phase C: `pii_test_results.csv`, `adversarial_test_results.csv`, and `latency_benchmark.csv` document PII recall, adversarial detection rate, and P50/P95/P99 timings.
 - Phase D: see `phase-d/blueprint.md` for SLOs, architecture, alert playbooks, and monthly cost analysis. The blueprint estimates about `$330/month` for 100k queries/month.
 
@@ -156,6 +191,8 @@ For a 5-minute demo, show:
 2. LLM judge comparing 2 answer versions with swapped positions.
 3. Adversarial tests with 3 attacks: DAN, ignore previous instructions, and base64 bypass.
 4. Latency benchmark output and layer timing summary.
+Video link : https://youtu.be/Zv-Ef6ME0eE
+Video backup link : https://www.youtube.com/watch?v=tkSIgRK6Av4
 
 ## Reflection
 

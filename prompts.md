@@ -7,6 +7,7 @@ These prompts were assisted by AI, then reviewed and adapted for this starter im
 | Prompt Area | Used For | File |
 |---|---|---|
 | Pairwise judge prompt | Compare Answer A vs Answer B with swap-order mitigation | `phase-b/judge_pairwise.py` |
+| Cross-judge protocol prompt | Aggregate multiple judge profiles and optional Gemini judge | `phase-b/cross_judge.py` |
 | Absolute scoring rubric | Score accuracy, relevance, conciseness, helpfulness, and overall | `phase-b/judge_pairwise.py` |
 | Topic validator prompt | Document the allowed-topic classification contract | `phase-c/input_guard.py` |
 | Output guard prompt | Classify unsafe final responses with local or Groq-backed guard | `phase-c/output_guard.py` |
@@ -54,6 +55,17 @@ Return JSON only:
   "reason": "brief reason"
 }
 ```
+
+## Cross-Judge Protocol Prompt
+
+Use multiple judges with different priorities, then aggregate their votes:
+
+- Accuracy-first judge: prioritize factual match to ground truth.
+- Concise-first judge: prefer direct answers when accuracy is similar.
+- Completeness-first judge: prioritize coverage of all required facts.
+- Optional Gemini judge: enabled only when `USE_GEMINI_JUDGE=true`.
+
+Return one row per question with each judge winner, judge scores, final majority winner, and agreement rate.
 
 ## Topic Validator Prompt
 

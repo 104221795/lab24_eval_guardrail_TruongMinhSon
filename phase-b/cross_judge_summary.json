@@ -1,0 +1,14 @@
+{
+  "num_questions": 30,
+  "judges": [
+    "accuracy_first",
+    "concise_first",
+    "completeness_first"
+  ],
+  "final_winner_counts": {
+    "tie": 24,
+    "A": 6
+  },
+  "mean_agreement_rate": 0.989,
+  "live_gemini_enabled": false
+}
