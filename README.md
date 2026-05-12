@@ -8,6 +8,8 @@ The code is designed to run locally on Windows with Python 3.10+. It uses determ
 
 The generated artifacts are already included: test set, RAGAS results, summary JSON, failure analysis, pairwise judge outputs, absolute scores, human labels, bias report, PII tests, adversarial tests, latency benchmark, and blueprint. The default grading path is local and fast. Live Gemini judging, Groq output guarding, and Presidio NER are all opt-in through environment variables so they do not introduce network failures or variable scores during submission review.
 
+The Day 18 pipeline artifact is integrated under `day18_c401/lab18_C401_F1-main`. Lab 24 uses its `test_set.json`, PDF corpus, and prior RAGAS report contexts through a lightweight adapter in `phase-a/rag_pipeline.py`. The full Day 18 dense pipeline can still be run separately when Qdrant/model dependencies are available, but Lab 24 defaults to a local retrieval adapter so evaluation remains reproducible on Windows.
+
 ## Setup
 
 ```powershell
@@ -141,6 +143,7 @@ Do not commit `.env`; `.gitignore` excludes it.
 
 - Phase A: `ragas_summary.json` contains aggregate faithfulness, answer relevancy, context precision, and context recall for 52 questions.
 - Phase A simulated evaluation cost: `$0.18`, below the required `$0.50` budget.
+- Phase A Day 18 corpus: `phase-a/day18_corpus_manifest.json` documents 2 source PDFs, 41 source PDF pages, and 52 derived text evidence pages/chunks used for evaluation.
 - Phase B: `judge_bias_report.md` documents position bias, length bias, and Cohen's Kappa calibration from 10 sample human labels.
 - Phase C: `pii_test_results.csv`, `adversarial_test_results.csv`, and `latency_benchmark.csv` document PII recall, adversarial detection rate, and P50/P95/P99 timings.
 - Phase D: see `phase-d/blueprint.md` for SLOs, architecture, alert playbooks, and monthly cost analysis. The blueprint estimates about `$330/month` for 100k queries/month.

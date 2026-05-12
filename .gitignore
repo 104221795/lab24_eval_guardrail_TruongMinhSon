@@ -5,3 +5,5 @@ __pycache__/
 .pytest_cache/
 phase-c/audit_log.jsonl
 output_guard_test_results.tmp
+*.zip
+day18_rag/

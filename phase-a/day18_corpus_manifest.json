@@ -1,0 +1,18 @@
+{
+  "source": "day18_c401/lab18_C401_F1-main",
+  "source_pdfs": [
+    {
+      "file": "BCTC.pdf",
+      "pages": 2,
+      "bytes": 1339383
+    },
+    {
+      "file": "Nghi_dinh_so_13-2023_ve_bao_ve_du_lieu_ca_nhan_508ee.pdf",
+      "pages": 39,
+      "bytes": 12529234
+    }
+  ],
+  "source_pdf_pages": 41,
+  "derived_text_evidence_pages": 52,
+  "note": "The source PDFs contain 41 PDF pages. Lab 24 uses 52 derived text evidence pages/chunks from the Day 18 corpus, Day 18 test set, and Day 18 RAGAS report contexts."
+}

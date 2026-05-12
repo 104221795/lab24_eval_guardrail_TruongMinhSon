@@ -85,7 +85,7 @@ def run_eval() -> tuple[pd.DataFrame, dict]:
         results = real
     else:
         rows = []
-        for idx, row in tqdm(testset.iterrows(), total=len(testset), desc="Evaluating mock RAG"):
+        for idx, row in tqdm(testset.iterrows(), total=len(testset), desc="Evaluating RAG pipeline"):
             rag = rag_pipeline(str(row["question"]))
             scores = heuristic_scores(
                 str(row["question"]),

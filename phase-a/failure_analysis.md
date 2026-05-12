@@ -4,16 +4,16 @@
 
 | # | Question | Type | Faithfulness | Answer Relevancy | Context Precision | Context Recall | Average |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Why should an output guard run after the RAG answer is generated? | reasoning | 0.857 | 0.75 | 0.564 | 0.6 | 0.693 |
-| 2 | Why use pairwise judging? | simple | 0.813 | 0.794 | 0.56 | 0.642 | 0.702 |
-| 3 | How do input guards, output guards, and audit logs reduce risk? | multi_context | 0.67 | 0.697 | 0.753 | 0.788 | 0.727 |
-| 4 | What is prompt injection detection? | simple | 0.857 | 0.75 | 0.65 | 0.7 | 0.739 |
-| 5 | What metric target is used for context precision? | simple | 0.857 | 0.812 | 0.575 | 0.714 | 0.739 |
-| 6 | Why run adversarial tests? | simple | 0.857 | 0.75 | 0.65 | 0.7 | 0.739 |
-| 7 | What is a refusal response? | simple | 0.857 | 0.75 | 0.65 | 0.7 | 0.739 |
-| 8 | Why is deterministic fallback useful in this lab? | reasoning | 0.857 | 0.75 | 0.65 | 0.7 | 0.739 |
-| 9 | Why should topic validation occur before RAG? | reasoning | 0.857 | 0.75 | 0.65 | 0.7 | 0.739 |
-| 10 | How can manual review improve generated testsets? | multi_context | 0.857 | 0.75 | 0.65 | 0.7 | 0.739 |
+| 1 | Thuế GTGT phát sinh trong kỳ được tính từ những chỉ tiêu nào? | reasoning | 0.96 | 0.95 | 0.634 | 0.82 | 0.841 |
+| 2 | Hàng hóa, dịch vụ bán ra chịu thuế suất 10% có giá trị và thuế GTGT là bao nhiêu? | simple | 0.96 | 0.95 | 0.657 | 0.82 | 0.847 |
+| 3 | Tờ khai được lập ngày nào và người ký đại diện là ai? | reasoning | 0.84 | 0.87 | 0.762 | 0.92 | 0.848 |
+| 4 | Trong hai tài liệu, tài liệu nào nói về thuế và tài liệu nào nói về dữ liệu cá nhân? | multi_context | 0.96 | 0.95 | 0.661 | 0.82 | 0.848 |
+| 5 | Trong hai tài liệu, có thông tin về tên ngân hàng hoặc số tài khoản nộp thuế của CÔNG TY CỔ PHẦN DHA SURFACES không? | multi_context | 0.96 | 0.95 | 0.688 | 0.82 | 0.854 |
+| 6 | Tờ khai thuế GTGT trong BCTC.pdf sử dụng mẫu số nào? | simple | 0.96 | 0.807 | 0.734 | 0.92 | 0.855 |
+| 7 | Kỳ tính thuế của tờ khai thuế GTGT là thời gian nào? | simple | 0.96 | 0.807 | 0.736 | 0.92 | 0.856 |
+| 8 | Nghị định 13 có nhắc đến dữ liệu cá nhân cơ bản không? | simple | 0.96 | 0.95 | 0.746 | 0.82 | 0.869 |
+| 9 | Mã số thuế của người nộp thuế trong tờ khai là gì? | simple | 0.96 | 0.83 | 0.776 | 0.92 | 0.871 |
+| 10 | So sánh bản chất của BCTC.pdf và Nghị định 13/2023/NĐ-CP. | multi_context | 0.96 | 0.95 | 0.76 | 0.82 | 0.872 |
 
 ## Clusters Identified
 
@@ -23,8 +23,8 @@ Pattern: reasoning and multi-context questions lose answer relevancy when the an
 
 Example questions:
 
-- Why should an output guard run after the RAG answer is generated?
-- How do input guards, output guards, and audit logs reduce risk?
+- Thuế GTGT phát sinh trong kỳ được tính từ những chỉ tiêu nào?
+- Tờ khai được lập ngày nào và người ký đại diện là ai?
 
 Root cause: the mock retriever does not rewrite multi-step questions into topic-specific subqueries.
 
@@ -36,8 +36,8 @@ Pattern: retrieved contexts sometimes include broad evaluation text when the que
 
 Example questions:
 
-- Why use pairwise judging?
-- Why should an output guard run after the RAG answer is generated?
+- Thuế GTGT phát sinh trong kỳ được tính từ những chỉ tiêu nào?
+- Hàng hóa, dịch vụ bán ra chịu thuế suất 10% có giá trị và thuế GTGT là bao nhiêu?
 
 Root cause: keyword-only retrieval has no metadata filter for topic or artifact type.
 
@@ -49,8 +49,8 @@ Pattern: answers that require two concepts are sometimes supported by only one r
 
 Example questions:
 
-- Why should an output guard run after the RAG answer is generated?
-- Why use pairwise judging?
+- Thuế GTGT phát sinh trong kỳ được tính từ những chỉ tiêu nào?
+- Hàng hóa, dịch vụ bán ra chịu thuế suất 10% có giá trị và thuế GTGT là bao nhiêu?
 
 Root cause: chunk selection is capped too tightly and does not enforce coverage diversity.
 

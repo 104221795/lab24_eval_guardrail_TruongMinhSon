@@ -4,9 +4,9 @@
 
 | Measure | Count |
 |---|---:|
-| Run 1 A wins | 8 |
-| Run 1 B wins | 6 |
-| Run 1 ties | 18 |
+| Run 1 A wins | 5 |
+| Run 1 B wins | 1 |
+| Run 1 ties | 26 |
 
 The first-position answer does not appear automatically favored because the judge runs the comparison twice with swapped ordering and reconciles disagreements.
 
@@ -14,8 +14,8 @@ The first-position answer does not appear automatically favored because the judg
 
 | Measure | Value |
 |---|---:|
-| Decisive comparisons | 14 |
-| Longer answer wins | 14 |
+| Decisive comparisons | 6 |
+| Longer answer wins | 6 |
 | Longer-answer win rate | 100.0% |
 
 The heuristic judge shows mild length preference when longer answers include more rubric terms. This is mitigated by an explicit conciseness dimension.

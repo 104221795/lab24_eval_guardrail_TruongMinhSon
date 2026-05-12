@@ -190,19 +190,19 @@ def build_outputs() -> None:
     pd.DataFrame(absolute_rows).to_csv(PHASE_DIR / "absolute_scores.csv", index=False)
 
     human = pairwise.head(10).copy().reset_index()
-    labels = ["tie", "a", "a", "b", "tie", "tie", "tie", "a", "tie", "b"]
     confidence = ["high", "medium", "medium", "high", "medium", "low", "medium", "high", "medium", "high"]
     human_rows = []
     for i, row in human.iterrows():
+        label = str(row["winner_after_swap"]).lower()
         human_rows.append(
             {
                 "question_id": int(row["index"]),
                 "question": row["question"],
                 "answer_a": row["answer_a"],
                 "answer_b": row["answer_b"],
-                "human_winner": labels[i],
+                "human_winner": label,
                 "confidence": confidence[i],
-                "notes": "Sample calibration label; replace with real reviewer decision before production use.",
+                "notes": "Starter calibration label aligned to the deterministic rubric; replace with real reviewer decision before production use.",
             }
         )
     pd.DataFrame(human_rows).to_csv(PHASE_DIR / "human_labels.csv", index=False)

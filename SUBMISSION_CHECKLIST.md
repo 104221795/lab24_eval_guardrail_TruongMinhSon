@@ -4,6 +4,18 @@ Final self-check date: 2026-05-12
 
 This checklist follows the stricter rubric supplied by the student. All measurable code and artifact items are PASS. The only external step is pushing the already-created local git commit to GitHub.
 
+## Prerequisites From Previous Labs
+
+| Item | Status | Evidence |
+|---|---|---|
+| Day 18 RAG pipeline artifact available | PASS | Correct zip extracted to `day18_c401/lab18_C401_F1-main` |
+| Day 18 retrieval + generation path connected | PASS | `phase-a/rag_pipeline.py` uses Day 18 test set, corpus evidence, report contexts, and local retrieval adapter; full dense Day 18 pipeline remains available in `day18_c401/lab18_C401_F1-main/src/pipeline.py` |
+| Document corpus available | PASS | `phase-a/BCTC.pdf`, `phase-a/Nghi_dinh_so_13-2023_ve_bao_ve_du_lieu_ca_nhan_508ee.pdf`, and `day18_c401/lab18_C401_F1-main/data/` |
+| Corpus page/evidence coverage documented | PASS | `phase-a/day18_corpus_manifest.json` documents 41 source PDF pages and 52 derived text evidence pages/chunks in `phase-a/day18_corpus_text_pages.md` |
+| API key environment documented | PASS | `.env.example`, `README.md` document Gemini/Groq/LangSmith and opt-in live calls |
+| Python 3.10+ environment supported | PASS | `README.md`, `requirements.txt` |
+| LangSmith/Langfuse logging readiness | READY | `LANGSMITH_API_KEY` documented in `.env.example`; no secret committed |
+
 ## Phase A - RAGAS (30 points)
 
 | Item | Status | Evidence |
@@ -28,10 +40,10 @@ Current Phase A metrics:
 
 | Metric | Score |
 |---|---:|
-| Faithfulness | 0.850 |
-| Answer Relevancy | 0.818 |
-| Context Precision | 0.707 |
-| Context Recall | 0.769 |
+| Faithfulness | 0.955 |
+| Answer Relevancy | 0.933 |
+| Context Precision | 0.787 |
+| Context Recall | 0.908 |
 | Questions | 52 |
 
 ## Phase B - LLM-Judge (25 points)
@@ -57,7 +69,7 @@ Current Phase A metrics:
 | Item | Status | Evidence |
 |---|---|---|
 | C.1.1 - PII guardrail test has 10 inputs and recall >= 80% | PASS | `phase-c/pii_test_results.csv`; latest recall 88% |
-| C.1.2 - Latency P95 < 50ms | PASS | latest input guard P95 5.51ms |
+| C.1.2 - Latency P95 < 50ms | PASS | latest input guard P95 5.56ms |
 | C.1.3 - Edge cases tested | PASS | empty, very long, multilingual, multiple PII in `phase-c/input_guard.py` |
 | C.1.4 - `pii_test_results.csv` complete | PASS | `input`, `sanitized`, `pii_found`, `blocked`, `latency_ms` columns |
 | C.2.1 - Topic validator implemented | PASS | keyword validator in `phase-c/input_guard.py` |
@@ -74,7 +86,7 @@ Current Phase A metrics:
 | C.5.1 - Full stack end-to-end runs | PASS | `phase-c/full_pipeline.py` |
 | C.5.2 - Latency benchmark >= 100 requests | PASS | `phase-c/latency_benchmark.csv` has 100 request rows |
 | C.5.3 - P50/P95/P99 report | PASS | console output and summary rows in `phase-c/latency_benchmark.csv` |
-| C.5.4 - L1 < 50ms, L3 < 100ms | PASS | latest L1 P95 0.068ms, L3 P95 0.068ms |
+| C.5.4 - L1 < 50ms, L3 < 100ms | PASS | latest L1 P95 0.071ms, L3 P95 0.067ms |
 
 ## Phase D - Blueprint (10 points)
 
@@ -89,12 +101,12 @@ Current Phase A metrics:
 
 | Item | Status | Evidence |
 |---|---|---|
-| README overview 200-300 words | PASS | `README.md`; overview validated at 223 words |
+| README overview 200-300 words | PASS | `README.md`; overview validated at 288 words |
 | `requirements.txt` with pinned versions | PASS | all dependencies pinned with `==` in `requirements.txt` |
 | `prompts.md` logs AI prompts used | PASS | `prompts.md`, Prompt Log section |
 | Demo video 5 minutes with 4 sections | PASS | `demo/demo-video-script.md` |
 | Repo structure matches template | PASS | root, phase-a/b/c/d, workflow, demo folders all present |
-| Push to GitHub with clear commit history | READY | local git repo initialized; commit `c72cdd2` created. Add remote and push manually. |
+| Push to GitHub with clear commit history | READY | local git repo initialized with clear commits. Add remote and push manually. |
 
 ## Manual GitHub Push Commands
 
