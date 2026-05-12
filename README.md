@@ -170,7 +170,7 @@ streamlit run dashboard/app.py
 To claim the public blog bonus, publish `blog/lab24-full-eval-guardrails-post.md` to Medium, dev.to, GitHub Pages, or the course forum, then add the public URL here:
 
 ```text
-Blog URL: TODO
+Blog URL: https://dev.to/104221795/-building-a-full-evaluation-and-guardrail-system-for-a-rag-app-2n44
 ```
 
 ## Results Summary
